@@ -112,9 +112,4 @@ Develop an AI-powered demand forecasting system to predict product demand across
 
 We welcome contributions! Please submit pull requests with detailed descriptions and relevant documentation.
 
----
-
-## 📄 License
-
-[MIT License](LICENSE)
 
