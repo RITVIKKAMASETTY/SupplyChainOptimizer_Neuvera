@@ -106,10 +106,5 @@ Develop an AI-powered demand forecasting system to predict product demand across
 
 > Setup instructions, environment configuration, and dataset details will be added here as development progresses.
 
----
-
-## 👨‍💻 Contributing
-
-We welcome contributions! Please submit pull requests with detailed descriptions and relevant documentation.
 
 
