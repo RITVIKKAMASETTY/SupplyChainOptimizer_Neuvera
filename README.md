@@ -1,110 +1,113 @@
-# AI-Driven Supply Chain Optimization
+# Supply Chain Optimizer
 
-This repository presents an end-to-end AI/ML-driven platform focused on optimizing different components of the supply chain, including sustainability, bottleneck detection, route optimization, and demand forecasting.
+A machine learning-based tool for optimizing supply chain operations, forecasting demand, and identifying bottlenecks.
 
----
+## Overview
 
-## 🔍 Project Overview
+This project uses deep learning (LSTM) to analyze and forecast supply chain metrics such as resource usage and utility allocation. It helps supply chain managers make data-driven decisions to optimize operations and prevent bottlenecks.
 
-We aim to leverage AI technologies such as Computer Vision, Machine Learning, and Natural Language Processing to address key challenges in the supply chain. Our goal is to enhance operational efficiency, reduce environmental impact, and increase customer satisfaction through intelligent automation and data-driven predictions.
+## Features
 
----
+- **Data Exploration**: Visualize and analyze supply chain data
+- **LSTM Model Training**: Train deep learning models to understand patterns in supply chain data
+- **Demand Forecasting**: Predict future resource needs and utility allocation
+- **Supply Chain Insights**: Identify bottlenecks and optimization opportunities
 
-## 📦 Modules & Implementation Plans
+## Installation
 
-### 🌱 1. Sustainability Optimization
+1. Clone this repository
+2. Install required dependencies:
 
-**Objective:**  
-Develop an AI-driven system to optimize resource usage and reduce environmental impact across the supply chain.
+```bash
+pip install -r requirements.txt
+```
 
-**AI/ML Methods:**
-- Computer Vision
-- Machine Learning
-- Natural Language Processing
+## Usage
 
-**Tech Stack:**
-- AI/ML Backend
-- Database
-- Frontend
+### Running the Streamlit App
 
----
+Launch the interactive dashboard with:
 
-### ⚠️ 2. Bottleneck Detection
+```bash
+streamlit run DemandSupply/supply_chain_app.py
+```
 
-**Objective:**  
-Implement an automated system to identify and predict supply chain bottlenecks using real-time data analysis.
+### Using the DemandForecaster Module
 
-**AI/ML Methods:**
-- Decision Trees
-- Deep Learning
-- K-Means Clustering
-- LSTM
-- Neural Networks
-- Prophet (Open Source)
-- Random Forest
+You can also use the demand forecasting module programmatically:
 
-**Tech Stack:**
-- AI/ML Backend
-- Cloud Database
-- DevOps
-- Frontend
+```python
+from DemandSupply.demand_forecast import DemandForecaster
 
----
+# Initialize the forecaster
+forecaster = DemandForecaster('DemandSupply/data/ecommerce_supply_chain_data.csv')
 
-### 🚚 3. Route Optimization
+# Load and preprocess data
+data = forecaster.load_data()
+processed_data = forecaster.preprocess_data()
 
-**Objective:**  
-Create an intelligent routing system that minimizes delivery times and fuel consumption while maximizing vehicle capacity utilization.
+# Define features and target columns
+features = [
+    'resource_usage', 'utility_allocation', 'shelf_life', 'hour', 'day', 'month',
+    'day_of_week', 'days_to_deadline', 'department_encoded', 'priority_encoded',
+    'departure_loc_encoded', 'arrival_loc_encoded', 'return_status_encoded',
+    'festive_season_encoded', 'status_encoded'
+]
 
-**AI/ML Methods:**
-- Greedy Heuristic Algorithms
-- Haversine Distance Formula
-- Nearest Neighbor Algorithm
-- Route Optimization with Constraints
-- TSP (Traveling Salesman Problem)
-- VRP (Vehicle Routing Problem)
+target_cols = ['resource_usage', 'utility_allocation']
 
-**Tech Stack:**
-- Directional Routing API
-- Google Maps Platform
-- JSON Handling
-- Lucide React
-- RESTful APIs
-- React Hooks
-- React.js SPA
+# Create sequences and train the model
+X, y = forecaster.create_sequences(features, target_cols, lookback=3)
+history = forecaster.train(X_train, y_train)
 
----
+# Generate a forecast
+forecasts = forecaster.forecast(sequence, target_cols, n_steps=7)
+```
 
-### 📈 4. Demand Forecasting
+## Dashboard Tabs
 
-**Objective:**  
-Develop an AI-powered demand forecasting system to predict product demand across different regions and seasons.
+The Streamlit application includes the following tabs:
 
-**AI/ML Methods:**
-- Deep Learning
-- LSTM
-- Neural Networks
-- Prophet (Open Source)
+1. **Data Exploration**: Visualize the supply chain data with interactive charts and tables
+2. **Model Training**: Configure and train the LSTM model with custom parameters
+3. **Forecasting**: Generate and visualize forecasts for different departments
+4. **Insights**: View key performance indicators and recommendations for optimization
 
-**Tech Stack:**
-- AI/ML Backend
-- Visualization Tools (TBD)
-- Scalable Data Pipelines
+## Data Requirements
 
----
+The application expects a CSV file with the following columns:
 
-## 🔗 Notion Reference Links
+- `department`: Department category (Logistics, Inventory, etc.)
+- `time`: Timestamp of the record
+- `resource_usage`: Resource utilization (numeric)
+- `utility_allocation`: Utility allocation (numeric)
+- `priority`: Priority level (numeric)
+- `departure_loc`: Departure location
+- `arrival_loc`: Arrival location
+- `deadline`: Deadline timestamp
+- `return_status`: Return status (Yes/No)
+- `festive_season`: Festive season flag (Yes/No)
+- `status`: Current status (In Transit, Delivered, etc.)
+- `bottleneck_flag`: Bottleneck indicator (0/1)
 
-- [Sustainability Optimization Plan](https://www.notion.so/Sustainability-Optimization-Implementation-Plan-1d60275c7d7a80fdbe13f7a68d8b0e0e)
-- [Bottleneck Detection Plan](https://www.notion.so/Bottleneck-Detection-Implementation-Plan-1d60275c7d7a80c3b664f75ac2d6202c)
-- [Route Optimization Plan](https://www.notion.so/Route-Optimization-Implementation-Plan-1d60275c7d7a804a9beddbb6e91617aa)
-- [Demand Forecasting Plan](https://www.notion.so/Demand-Forecasting-Implementation-Plan-1d60275c7d7a8051af16d2416b0debcb)
+## Model Architecture
 
----
+The LSTM neural network architecture used for forecasting includes:
 
-## 🚀 Getting Started
+- Input layer with lookback window
+- LSTM layer with 64 units and ReLU activation
+- Dropout layer (20%)
+- LSTM layer with 32 units and ReLU activation
+- Dropout layer (20%)
+- Dense output layer
 
-> Setup instructions, environment configuration, and dataset details will be added here as development progresses.
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 
 
