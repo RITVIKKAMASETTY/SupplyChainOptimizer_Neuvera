@@ -1,4 +1,3 @@
-/* Base styles */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #333;
@@ -6,8 +5,6 @@ body {
     margin: 0;
     padding: 0;
   }
-  
-  /* Container styles */
   .p-4 {
     padding: 1rem;
   }
@@ -28,8 +25,6 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
-  
-  /* Card styles */
   .bg-white {
     background-color: #ffffff;
   }
@@ -41,8 +36,6 @@ body {
   .shadow {
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
-  
-  /* Layout styles */
   .flex {
     display: flex;
   }
@@ -110,8 +103,6 @@ body {
   .mr-6 {
     margin-right: 1.5rem;
   }
-  
-  /* Typography */
   .text-2xl {
     font-size: 1.5rem;
   }
@@ -159,8 +150,6 @@ body {
   .text-white {
     color: #ffffff;
   }
-  
-  /* Button styles */
   button {
     cursor: pointer;
     border: none;
@@ -248,8 +237,6 @@ body {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-  
-  /* Form element styles */
   input, select {
     outline: none;
   }
@@ -277,8 +264,6 @@ body {
   .focus\:border-blue-500:focus {
     border-color: #3b82f6;
   }
-  
-  /* Table styles */
   .divide-y > * + * {
     border-top-width: 1px;
   }
@@ -290,8 +275,6 @@ body {
   .whitespace-nowrap {
     white-space: nowrap;
   }
-  
-  /* Special styling for node types */
   .bg-blue-100 {
     background-color: #dbeafe;
   }
@@ -323,8 +306,6 @@ body {
   .text-yellow-700 {
     color: #b45309;
   }
-  
-  /* Fixed modal styling */
   .fixed {
     position: fixed;
   }
@@ -351,8 +332,6 @@ body {
   .max-w-lg {
     max-width: 32rem;
   }
-  
-  /* Animation */
   .animate-spin {
     animation: spin 1s linear infinite;
   }
@@ -365,8 +344,6 @@ body {
       transform: rotate(360deg);
     }
   }
-  
-  /* Responsive styles */
   @media (min-width: 768px) {
     .md\:flex-row {
       flex-direction: row;
@@ -390,15 +367,11 @@ body {
       grid-column: span 2 / span 2;
     }
   }
-  
-  /* Map container */
   .mapContainerStyle {
     width: 100%;
     height: 500px;
     border-radius: 8px;
   }
-  
-  /* Utility classes */
   .hidden {
     display: none;
   }
