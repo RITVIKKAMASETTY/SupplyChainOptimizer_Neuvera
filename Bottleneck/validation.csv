@@ -1,0 +1,21 @@
+department,time,resource_usage,utility_allocation,priority,departure_loc,arrival_loc,deadline,return_status,festive_season,shelf_life,status
+Logistics,2025-10-01 08:00,100,20,High,Delhi,Mumbai,2025-10-03,Yes,Yes,5,Bottleneck
+Production,2025-10-01 09:00,30,95,Low,Chennai,Bangalore,2025-10-04,No,No,120,Safe
+Distribution,2025-10-01 10:00,50,50,Medium,Kolkata,Hyderabad,2025-10-05,No,No,30,Safe
+Inventory,2025-10-01 11:00,99,1,High,Pune,Jaipur,2025-10-06,Yes,Yes,2,Bottleneck
+Logistics,2025-10-01 12:00,45,85,Low,Ahmedabad,Surat,2025-10-07,No,No,90,Safe
+Production,2025-10-01 13:00,95,95,High,Lucknow,Kanpur,2025-10-08,Yes,No,25,Bottleneck
+Distribution,2025-10-01 14:00,20,100,Low,Chandigarh,Amritsar,2025-10-09,No,No,110,Safe
+Inventory,2025-10-01 15:00,80,80,Medium,Indore,Bhopal,2025-10-10,Yes,No,40,Safe
+Logistics,2025-10-01 16:00,98,5,High,Nagpur,Nashik,2025-10-11,Yes,Yes,7,Bottleneck
+Sales,2025-10-01 17:00,85,70,Medium,Bangalore,Mysore,2025-10-12,No,Yes,35,Safe
+Marketing,2025-10-01 18:00,90,55,High,Mumbai,Pune,2025-10-13,Yes,Yes,18,Bottleneck
+Operations,2025-10-01 19:00,60,75,Medium,Delhi,Agra,2025-10-14,No,No,45,Safe
+Research,2025-10-01 20:00,75,85,Low,Chennai,Pondicherry,2025-10-15,No,No,60,Safe
+Finance,2025-10-01 21:00,97,30,High,Hyderabad,Warangal,2025-10-16,Yes,Yes,10,Bottleneck
+Logistics,2025-10-01 22:00,5,99,Low,Kolkata,Asansol,2025-10-17,No,No,100,Safe
+Production,2025-10-02 08:00,100,0,High,Surat,Vadodara,2025-10-18,Yes,Yes,1,Bottleneck
+Distribution,2025-10-02 09:00,0,100,Low,Chandigarh,Ludhiana,2025-10-19,No,No,150,Safe
+Inventory,2025-10-02 10:00,67,67,Medium,Jaipur,Jodhpur,2025-10-20,No,Yes,33,Safe
+Logistics,2025-10-02 11:00,93,7,High,Bhopal,Indore,2025-10-21,Yes,Yes,9,Bottleneck
+Production,2025-10-02 12:00,40,80,Low,Nashik,Pune,2025-10-22,No,No,85,Safe 
